@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "43d46893-1c4e-4c2d-b813-c2d69633d377",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"User5\",\r\n    \"email\": \"user5@test.com\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user3@test.com\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVXNlciIsIl9pZCI6IjYzNDdiNDA5NTVmM2NjNDQ3NDg3MDdmOSIsInVzZXJuYW1lIjoiVXNlcjEiLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkdWpta09MaXBXNWpyNzUxRkFGcnNwdXZYQWo2Qm5lRzUwUC9mQVRqMVFURFhFVS50a1hLMEMiLCJfX3YiOjAsImlhdCI6MTY2NTY0MzYxMiwiZXhwIjoxNjY1NjYxNjEyfQ.8SkCzy1kTPQh1bT-PLsiKkeA8_79r1TBHQ1spwkT8nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test Project 2\",\r\n    \"members\": [\"6347b41b55f3cc44748707fc\",\"6347b42255f3cc44748707fd\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/create-project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVXNlciIsIl9pZCI6IjYzNDdiNDE1NTVmM2NjNDQ3NDg3MDdmYiIsInVzZXJuYW1lIjoiVXNlcjMiLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkVmhLcGdFTFp3OEpLL0VpTi9EWS5JZUNmYk5ON2hTWW9XR0hLOUNjdFhUemNqWGRxVktyeW0iLCJfX3YiOjAsImlhdCI6MTY2NTY0NTM5MywiZXhwIjoxNjY1NjYzMzkzfQ.jc73fIeV7MKpC8Zoik-xqoryYq6ZVzEfmicsxNLEFwE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Project Testing\",\r\n    \"project_id\": \"6347b48755f3cc44748707fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/create-task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project Task Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVXNlciIsIl9pZCI6IjYzNDdiNDA5NTVmM2NjNDQ3NDg3MDdmOSIsInVzZXJuYW1lIjoiVXNlcjEiLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkdWpta09MaXBXNWpyNzUxRkFGcnNwdXZYQWo2Qm5lRzUwUC9mQVRqMVFURFhFVS50a1hLMEMiLCJfX3YiOjAsImlhdCI6MTY2NTY1MjgzMCwiZXhwIjoxNjY1NjcwODMwfQ.PlwB_BBeVAhT1-ZsLOsrhBY4FwGl3Vr8SsJQzrOKGOM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get-tasks/6347b48755f3cc44748707fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-tasks",
+						"6347b48755f3cc44748707fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Projects List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVXNlciIsIl9pZCI6IjYzNDdiNDE1NTVmM2NjNDQ3NDg3MDdmYiIsInVzZXJuYW1lIjoiVXNlcjMiLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkVmhLcGdFTFp3OEpLL0VpTi9EWS5JZUNmYk5ON2hTWW9XR0hLOUNjdFhUemNqWGRxVktyeW0iLCJfX3YiOjAsImlhdCI6MTY2NTY0NTM5MywiZXhwIjoxNjY1NjYzMzkzfQ.jc73fIeV7MKpC8Zoik-xqoryYq6ZVzEfmicsxNLEFwE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get-projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task Status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-task/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-task",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
